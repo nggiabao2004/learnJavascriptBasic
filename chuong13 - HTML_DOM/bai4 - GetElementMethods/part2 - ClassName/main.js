@@ -7,9 +7,3 @@ console.log(headingNodes);
 // 1:h1.heading
 // length:2
 // [[Prototype]]:HTMLCollection
-
-var headingNodes = document.getElementsByTagName('heading');
-console.log(headingNodes);
-// HTMLCollection []
-// length: 0
-// [[Prototype]]: HTMLCollection
