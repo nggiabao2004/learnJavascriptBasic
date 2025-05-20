@@ -1,3 +1,4 @@
+//NodeList
 var listItemNodes = document.querySelectorAll('.box-1 li');
 console.log(listItemNodes);
 // NodeList(2) [li, li]
