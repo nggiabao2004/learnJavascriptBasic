@@ -3,7 +3,7 @@ var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java'];
 function render(courses) {
     var ulElement = document.querySelector('.courses-list');
     
-    var html = courses.map(function(course) {
+    var html = courses.map(function(course){
         return `<li>${course}</li>`;
     }).join('');
     
