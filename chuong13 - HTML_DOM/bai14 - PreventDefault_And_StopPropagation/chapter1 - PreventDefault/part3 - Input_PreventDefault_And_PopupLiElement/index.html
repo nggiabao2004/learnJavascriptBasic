@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: none;
+        }
+
+        input:focus ~ ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <input placeholder="Tìm kiếm"/>
+
+    <ul>
+        <li>Javascript</li>
+        <li>Java</li>
+        <li>Python</li>
+    </ul>
+
+    <!-- Cấm xóa -->
+    <script src="main.js"></script>
+</body>
+</html>
