@@ -17,25 +17,24 @@ var comments = [
    {
       id: 1,
       user_id: 1,
-      content: "Comment A"
+      content: "Hello (from A)"
    },
    {
       id: 2,
       user_id: 2,
-      content: "Comment B"
+      content: "Hi (from B)"
    },
    {
       id: 3,
       user_id: 1,
-      content: "Comment C"
+      content: "A love Javascript (from A)"
    },
 ];
 
+//Cách bươc để hiện các dòng comment (user: comment)
 //1. Lấy Comments
 //2. Từ comments lấy ra user_id,
-//    từ user_id lấy ra user tương ứng
-
-//Fake API
+//3. Từ user_id lấy ra user tương ứng
 function getComments(){
    return new Promise(function(resolve){
       resolve(comments);
@@ -61,24 +60,17 @@ getComments()
          .then(function(users){
             return {
                users:users,
-               comments:comments
             };
-         }
-      );
-   })
-   .then(function(data){
-      var commentBlock = document.getElementById('comment-box');
-      var html = '';
-      data.comments.forEach(function(comment){
-         var user = data.users.find(function(user){
-            return user.id === comment.user_id;
          });
-         html += `<li>${user.name}: ${comment.content}</li>`;
-      });
-      commentBlock.innerHTML = html;
-         
-      });
-// (Mở live server và trình duyệt để xem kết quả HTML)
-// User A: Comment A
-// User B: Comment B
-// User A: Comment C
+   })
+   .then(function(users){
+      console.log(users)
+   })
+//{users: Array(3)}
+//    users: Array(3)
+//       0: {id: 1, name: 'User A'}
+//       1: {id: 2, name: 'User B'}
+//       2: {id: 3, name: 'User C'}
+//       length: 3
+//       [[Prototype]]: Array
+//    (0)[[Prototype]]: Object
