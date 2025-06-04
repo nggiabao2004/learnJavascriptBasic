@@ -1,6 +1,7 @@
 // Enhanced object literals
 // Định nghĩa method cho object
 
+//Cách thông thường
 var name1 = 'Javascript';
 var price1 = 120;
 var course1 = {
